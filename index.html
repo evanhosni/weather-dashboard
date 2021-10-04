@@ -19,64 +19,26 @@
             <h2>Search for a City</h2>
 
             <div id="search-bar" class="input-group mb-3">
-                <input type="text" id="search-field" class="form-control" placeholder="Seattle">
-                <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button>
+                <input type="text" id="search-field" class="form-control" value=""/>
+                <button class="btn btn-outline-secondary" type="submit" id="search-button">Search</button>
             </div>
-
-            <button class="history-city col-12">New York</button>
-
+            <div id="search-history"></div>
+            <button id="clear-button" class="btn btn-outline-secondary col">Clear History</button>
         </div>
 
-        <div id="output" class="col-9">
+        <div id="output" class="col-9 hidden">
             <div id="current-weather">
-                <h1>Seattle (<span id="now"></span>)</h1>
-                <p>Temp: <span id="today-temp"></span></p>
-                <p>Wind: <span id="today-wind"></span></p>
-                <p>Humidity: <span id="today-humidity"></span></p>
-                <p>UV Index: <span id="today-uv-index"></span></p>
+                <h1><span id='data-city'></span> <span id="data-now"></span><img id="data-now-icon" src='' alt=''/></h1>
+                <p>Temp: <span id="data-temp"></span></p>
+                <p>Wind: <span id="data-wind"></span></p>
+                <p>Humidity: <span id="data-humidity"></span></p>
+                <p>UV Index: <span id="data-uv-index"></span></p>
             </div>
 
             <div id="five-day-forecast">
                 <h4>5-Day Forecast:</h4>
-
-                <div id="card-holder" class="row">
-                    <div class="weather-card card col">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div class="weather-card card col">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div class="weather-card card col">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div class="weather-card card col">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-
-                    <div class="weather-card card col">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="card-holder" class="row"></div>
             </div>
-
         </div>
     </main>
 

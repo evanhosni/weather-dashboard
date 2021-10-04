@@ -1,9 +1,14 @@
 :root {
     --light: seashell;
+    --lesslight: rgb(169, 169, 169);
 }
 
 * {
     margin: 0;
+}
+
+p {
+    font-weight: 500;
 }
 
 body {
@@ -12,7 +17,8 @@ body {
 
 header {
     background-image: linear-gradient(to right, rgb(49, 52, 255), rgb(38, 0, 128));
-    color: var(--light)
+    color: var(--light);
+    margin-bottom: 25px
 }
 
 #input {
@@ -28,21 +34,51 @@ header {
     margin: 8px 0px;
     padding: 5px;
     border-radius: 5px;
-    background: rgb(192, 192, 192);
+    background: var(--lesslight);
+    text-transform: capitalize;
+}
+
+#clear-button {
+    margin: 8px 0px;
+    padding: 5px;
+    visibility: hidden;
 }
 
 #output {
     padding: 10px 50px 10px 10px;
+    visibility: hidden;
+}
+
+#data-city {
+    text-transform: capitalize;
 }
 
 #current-weather {
     border: black solid 3px;
     padding: 10px;
     margin-bottom: 25px;
+    background: var(--lesslight);
+}
+
+#current-weather img {
+    width: 60px;
+}
+
+#data-uv-index {
+    padding: 3px 10px;
+    color: var(--light);
+    border-radius: 5px;
 }
 
 .weather-card {
     margin: 15px;
+    padding: 25px 20px 10px;
+    line-height: 2.5;
+    min-width: 160px;
     background: rgb(46, 54, 88);
-    color: var(--light)
+    color: var(--light);
+}
+
+.weather-card img {
+    width: 50px;
 }
